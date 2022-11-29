@@ -1,18 +1,21 @@
 package stepdefinitions;
 
+import org.openqa.selenium.WebDriver;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageobjects.createrepository_pageobject;
+import pageobjects.loginpage_pageobject;
 
 
-public class create_repository_stepdef {
-
-	createrepository_pageobject create_repo_po;
+public class create_repository_stepdef extends loginpage_pageobject{
+	public WebDriver driver;
+	createrepository_pageobject create_repo_po = new createrepository_pageobject();
 	
 	@Given("click newrepository")
 	public void click_on_the_plus_icon_dropdown_and_newrepository() {
-	    create_repo_po.selectNewRepo();
+	    create_repo_po.selectNewRepo().click();
 	}
 
 	@Then("Insert the repository name")

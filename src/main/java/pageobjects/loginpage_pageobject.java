@@ -16,13 +16,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class loginpage_pageobject {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	By Button1=By.xpath("//a[text()[normalize-space()='Sign in']]");
 	By UserName = By.xpath("//input[contains(@class,'form-control input-block js-login-field')]");
 	By Password = By.xpath("//input[contains(@class,'form-control input-block js-password-field')]");
 	By Signin = By.xpath("//input[contains(@class,'btn btn-primary btn-block js-sign-in-button')]");
 	
+	  
 	 public void viewLoginPage() throws IOException{
 		 WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();

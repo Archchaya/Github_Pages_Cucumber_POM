@@ -7,7 +7,7 @@ import java.util.Properties;
 public class credentials_reader {
 
 	public static Properties getPropertyObject() throws IOException {
-		FileInputStream fp = new FileInputStream("configs/credentials.properties");
+		FileInputStream fp = new FileInputStream("configurations/credentials.properties");
 		
 		Properties prop = new Properties();
 		prop.load(fp);
